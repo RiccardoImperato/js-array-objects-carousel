@@ -23,7 +23,6 @@ function autoPlay() {
 // Programma
 
 // Auto play
-
 let myFn = setInterval(autoPlay, 3000);
 const play = document.querySelector('.start');
 const stop = document.querySelector('.stop');
@@ -64,19 +63,17 @@ const images = [
     },
 ];
 
+// Slide
 const items = document.querySelector('.items');
 let currentslide = 0;
 
-// Slide
-let item = 0;
-
 for (let i = 0; i < images.length; i++) {
     // Creo gli elementi nel DOM e vi appendo le immagini
-    item = document.createElement('div');
+    const item = document.createElement('div');
     item.classList.add('item');
     const img = document.createElement('img');
     const info = document.createElement('div');
-    const titolo = document.createElement('h3');
+    const titolo = document.createElement('h2');
     const descrizione = document.createElement('p');
 
     titolo.innerHTML = images[i].titolo;
@@ -105,27 +102,22 @@ console.log(domItem);
 // Thumbnail
 const thumb = document.querySelector('.list');
 let currentThumb = 0;
-let element = 0;
 
 for (let i = 0; i < images.length; i++) {
     // Contenitore nel DOM
-    element = document.createElement('div');
+    const element = document.createElement('div');
     element.classList.add('thumb-item');
     thumb.append(element);
 
-    // Click su thumbnail
-    element.addEventListener("click", function () {
-        console.log(element);
-    });
-
     // Layer
     const layer = document.createElement('div');
-    element.append(layer);
     layer.classList.add('layer');
+    element.append(layer);
 
     if (i === currentThumb) {
         element.classList.add('thumb-active');
     }
+
     // Immagini
     const img = document.createElement('img');
     img.src = `img/${images[i].immagine}`;
@@ -137,9 +129,7 @@ for (let i = 0; i < images.length; i++) {
 const domThumbItem = document.querySelectorAll('.thumb-item');
 console.log(domThumbItem);
 
-// Click per scorrere le immagini 
-
-// Frecce
+// Frecce per scorrere slides/thumbnails
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 

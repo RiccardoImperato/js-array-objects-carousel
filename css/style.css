@@ -1,9 +1,21 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*/ Reset */
+
+/* Play e Stop */
+.buttons {
+    text-align: center;
+    margin: 3.125rem 0;
+}
+
+/*/ Play e Stop */
+
+/* Slider */
 .container {
     width: 900px;
     margin: 0 auto;
@@ -33,6 +45,22 @@
     display: block;
 }
 
+/*/ Slider */
+
+/* Titolo e descrizione slides */
+.info {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #fff;
+    position: absolute;
+    left: 1.25rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+}
+
+/*/ Titolo e descrizione slides */
+
+/* Bottoni next e prev */
 .prev,
 .next {
     width: 20px;
@@ -79,6 +107,9 @@
     transform: translate(-50%) rotate(135deg);
 }
 
+/*/ Bottoni next e prev */
+
+/* Thumbnails */
 .side {
     height: 400px;
     width: 25%;
@@ -111,17 +142,4 @@
     filter: brightness(2);
 }
 
-.buttons {
-    text-align: center;
-    margin: 3.125rem 0;
-}
-
-.info {
-    text-align: center;
-    font-size: 1.25rem;
-    color: #fff;
-    position: absolute;
-    left: 1.25rem;
-    bottom: 1.25rem;
-    right: 1.25rem;
-}
+/*/ Thumbnails */
