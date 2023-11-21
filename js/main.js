@@ -113,6 +113,11 @@ for (let i = 0; i < images.length; i++) {
     element.classList.add('thumb-item');
     thumb.append(element);
 
+    // Click su thumbnail
+    element.addEventListener("click", function () {
+        console.log(element);
+    });
+
     // Layer
     const layer = document.createElement('div');
     element.append(layer);
