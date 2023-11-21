@@ -58,13 +58,12 @@ const images = [
         descrizione: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, nulla illum.',
         immagine: '04.jpg',
     }, {
-        titolo: 'Spiaggio',
+        titolo: 'Spiaggia',
         descrizione: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, nulla illum.',
         immagine: '05.jpg',
     },
 ];
 
-// creo gli elementi nel DOM e vi appendo le immagini
 const items = document.querySelector('.items');
 let currentslide = 0;
 
@@ -72,14 +71,27 @@ let currentslide = 0;
 let item = 0;
 
 for (let i = 0; i < images.length; i++) {
+    // Creo gli elementi nel DOM e vi appendo le immagini
     item = document.createElement('div');
     item.classList.add('item');
+    const img = document.createElement('img');
+    const info = document.createElement('div');
+    const titolo = document.createElement('h3');
+    const descrizione = document.createElement('p');
+
+    titolo.innerHTML = images[i].titolo;
+    descrizione.innerHTML = images[i].descrizione;
+    info.classList.add('info');
+    info.append(titolo);
+    info.append(descrizione);
+    item.append(info);
+
     // Classe active per visualizzare le immagini
     if (i === currentslide) {
         item.classList.add('active');
     }
+
     // Immagini
-    const img = document.createElement('img');
     img.src = `img/${images[i].immagine}`;
     img.alt = `Landscape ${images[i]}`;
     item.append(img);
